@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import './Listings.css';
+import './Listing.css';
 
 
-class Listings extends Component {
+class Listing extends Component {
   constructor(props) {
     super(props);
     this.state = {pin: 'Tracer', internationalFor: 'Listing for ', internationalFrom: ' from '}
@@ -15,7 +15,7 @@ class Listings extends Component {
 
   render() {
    return (
-   <div className="Listings">
+   <div className="Listing">
      {this.state.internationalFor} {this.state.pin} {this.state.internationalFrom} {this.props.name}
      <br/>
      <button className="FrenchyButton" onClick={this.frenchify}>Frenchify!</button>
@@ -24,4 +24,4 @@ class Listings extends Component {
   }
 }
 
-export default Listings;
+export default Listing;

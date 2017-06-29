@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import Listings from './Listings';
+import Listings from './Listings/Listings';
 
  const App = () => {
    return (
    <div className="App">Welcome to Blizzpins!
-     <Listings name="Tidalboot"/>  
-     <Listings name="RyanCosans"/>
-     <Listings name="JeffKaplan"/>
+     <Listings />
    </div>);
  };
 
