@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Listing tests renders and matches our existing snapshot 1`] = `
+<div
+  className="Listing"
+>
+  Listing for 
+   
+  Tracer
+   
+   from 
+   
+  JeffKaplan
+  <br />
+  <button
+    className="FrenchyButton"
+    onClick={[Function]}
+  >
+    Frenchify!
+  </button>
+  <button
+    className="RemoveListing"
+    onClick={[Function]}
+  >
+    Remove listing
+  </button>
+</div>
+`;
