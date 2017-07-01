@@ -6,7 +6,7 @@ class AddListing extends Component {
     super(props);
     this.state = { traderName: '' };
     this.handleUpdate = this.handleUpdate.bind(this);
-    this.addListing = this.addListing.bind(this)
+    this.addListing = this.addListing.bind(this);
   }
   handleUpdate(event) {
     this.setState({ traderName: event.target.value });

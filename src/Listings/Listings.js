@@ -8,15 +8,23 @@ class Listings extends Component {
     super(traders);
     this.state = {traderNames: ['Tidalboot', 'RyanCosans', 'JeffKaplan', 'ChrisMetzen']}
     this.addListing = this.addListing.bind(this);
+    this.removeListing = this.removeListing.bind(this);
   }
 
-  addListing(pinName) {
-    this.setState({traderNames: [...this.state.traderNames, pinName]});
+  addListing(traderName) {
+    this.setState({traderNames: [...this.state.traderNames, traderName]});
+  }
+
+  removeListing(traderName) {
+    const filteredTraderList = this.state.traderNames.filter(name => {
+      return name !== traderName;
+    });
+    this.setState({traderNames: filteredTraderList});
   }
 
   allListings() {
     return this.state.traderNames.map(name => (
-    <Listing key={name} name={name}/>  
+    <Listing key={name} name={name} removeListing={this.removeListing}/>  
     ));
   }
 

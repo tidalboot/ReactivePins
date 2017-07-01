@@ -7,10 +7,15 @@ class Listing extends Component {
     super(props);
     this.state = {pin: 'Tracer', internationalFor: 'Listing for ', internationalFrom: ' from '}
     this.frenchify = this.frenchify.bind(this);
+    this.removeListing = this.removeListing.bind(this);
   };
 
   frenchify() {
     this.setState({ internationalFor: 'Inscription pour', internationalFrom: 'de ' })
+  }
+
+  removeListing() {
+    this.props.removeListing(this.props.name);
   }
 
   render() {
@@ -19,6 +24,7 @@ class Listing extends Component {
      {this.state.internationalFor} {this.state.pin} {this.state.internationalFrom} {this.props.name}
      <br/>
      <button className="FrenchyButton" onClick={this.frenchify}>Frenchify!</button>
+     <button className="RemoveListing" onClick={this.removeListing}>Remove listing</button>
   </div>
    );
   }
